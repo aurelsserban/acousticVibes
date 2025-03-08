@@ -1,0 +1,259 @@
+@layer reset, base, layout, componenets;
+
+/* Reset Layer - CSS */
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
+  html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+
+  /* https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html */
+  [role="list"] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    min-block-size: 100vh;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  button,
+  input,
+  label {
+    line-height: 1.1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p,
+  li {
+    text-wrap: pretty;
+  }
+
+  img,
+  picture {
+    max-inline-size: 100%;
+    display: block;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+
+/* Base Layer - CSS */
+
+@layer base {
+  :root {
+    /* colors here */
+    --clr-black: #000000;
+    --clr-blue-100: #bafefc;
+    --clr-blue-200: #81e7e6;
+    --clr-blue-400: #71d8d7;
+    --clr-blue-500: #319d9c;
+    --clr-blue-800: #061212;
+    /* end here */
+
+    /* Start typography here */
+    --ff-heading: "Outfit", sans-serif;
+    --ff-body: "Fira Sans", sans-serif;
+  
+    --fs-300: 0.875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.125rem;
+    --fs-600: 1.25rem;
+    --fs-700: 1.5rem;
+    --fs-800: 2rem;
+    --fs-900: 3.75rem;
+    --fs-1000: 3.75rem;
+  
+    @media (width > 760px) {
+      --fs-300: 0.875rem;
+      --fs-400: 1rem;
+      --fs-500: 1.25rem;
+      --fs-600: 1.5rem;
+      --fs-700: 2rem;
+      --fs-800: 3rem;
+      --fs-900: 5rem;
+      --fs-1000: 7.5rem;
+    }
+    /* End typography here */
+
+    --text-main: var(--clr-blue-200);
+    --text-high-contrast: var(--clr-blue-500);
+    --text-light: var(--clr-blue-400);
+
+    --background-main: var(--clr-black);
+    --background-light: var(--clr-blue-800);
+
+    --font-size-heading-sm: var(--fs-700);
+    --font-size-heading-regular: var(--fs-800);
+    --font-size-heading-lg: var(--fs-900);
+    --font-size-heading-xl: var(--fs-1000);
+
+    --font-size-regular-sm: var(--fs-200);
+    --font-size-regular: var(--fs-300);
+    --font-size-regular-lg: var(--fs-400);
+    --font-size-regular-xl: var(--fs-500);
+
+    --border-radius-1: 0.25rem;
+    --border-radius-2: 0.5rem;
+    --border-radius-3: 0.75rem;
+  }
+}
+
+
+html {
+  font-family: var(--ff-body);
+  line-height: 1.6;
+  color: var(--clr-blue-200);
+}
+
+body {
+  font-size: var(--font-size-heading-regular);
+  color: var(--text-main);
+  background-color: var(--background-main);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--ff-heading);
+  color: var(--text-high-contrast);
+}
+
+h1 {
+  font-size: var(--font-size-heading-lg);
+}
+
+a {
+  color: var(--text-high-contrast);;
+}
+
+a:hover {
+  color: var(--text-main);
+}
+
+a:focus-visible {
+  color: var(--text-light);
+}
+
+#header {
+  position: sticky;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.header-sentinel {
+  position: relative;
+  height: 1px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+/* Styles applied when header intersects with sections */
+.header-scrolled {
+  background-color: var(--background-main);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Example of changing elements inside the header when scrolled */
+.header-scrolled .logo {
+  height: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navigation {
+  
+  font-size: var(--fs-700);
+  font-weight: 500;
+
+  ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+  
+}
+
+.secondary-header {
+  display: flex;
+  font-size: var(--font-size-regular-lg);
+  justify-content: space-between;
+
+}
+
+.secondary-header__contact {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  a {
+    text-decoration: none;
+  }
+  a:first-of-type {
+    display: inline-flex;
+    align-items: center;
+    gap:4px;
+  }
+}
+
+.secondary-header__socials {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 8px;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.hero {
+  
+}

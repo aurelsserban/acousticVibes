@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Acousting Vibes</title>
+</head>
+<body>
+    <header id="header">
+        <div class="secondary-header">
+            <div class="secondary-header__contact">
+                <a href="tel:+40736644745"><img src="assets/phone-icon.svg" alt="">0736.644.745</a>
+                <a href="mailto:contact@acousticvibes.ro">contact@acousticvibes.ro</a>
+            </div>
+            <div class="secondary-header__socials">
+                <ul>
+                    <li><a href="https://youtube.com/@AcousticVibesBucharest">youtube</a></li>
+                    <li><a href="https://facebook.com/Acoustic.Vibes.Bucharest">facebook</a></li>
+                    <li><a href="https://youtube.com/@AcousticVibesBucharest">instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="navigation container">
+            <ul>
+                <li><a href="/">acasa</a></li>
+                <li><a href="">despre</a></li>
+                <li><a href="">asculta</a></li>
+                <li><a href="/"><img src="assets/logo.png" class="logo" alt="Acoustic Vibes"></a></li>
+                <li><a href="">blog</a></li>
+                <li><a href="">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Observer sentinel DO NOT DELETE THIS!!!-->
+     <div class="header-sentinel"></div>
+    <main class="main">
+        <section class="hero section">
+            <img src="assets/header.png" alt="Acoustic Vibes Member Group Photo">
+        </section>
+        <section class="description section">
+            <p>Acoustic Vibes este o trupa instrumentala din Bucuresti, formata doar din muzicieni pasionati.</p>
+            <p>Reprezinta un concept unic in Romania,  contemporan si versatil.</p>
+            <p>Adaugam magie celor mai importante evenimente ale tale, fie ca este vorba de primirea invitatilor la nunta, botez, petreceri sau evenimente corporate, cereri in casatorie sau concerte la localul tau.</p>
+        </section>
+        <section class="videoplayer section">
+            <video src="">
+
+            </video>
+            <h3>
+                De ce sa ne alegi pe noi?
+            </h3>
+            <p>
+                Venim cu un proiect neobisnuit, prin prisma faptului ca redam in maniera pur instrumentala, cu o amprenta personala, cele mai indragite piese.
+            </p>
+            <p>
+                Componenta instrumentelor si abordarea pieselor ne diferentiaza de celelalte trupe instrumentale pe care le vei gasi pe piata din Romania, in general cvartete sau trio-uri de corzi.
+            </p>
+            <p>
+                Playlistul nostru contine genurile pop, rock, jazz, blues, latino, caffe concert, muzica clasica si de film si se extinde constant. 
+            </p>
+            <p>
+                Pentru ca suntem inovatori si muzica este cea mai mare pasiune a noastra, putem include in momentul tau, orice melodie adecvata pe care o indragesti, chiar daca nu este in repertoriul nostru.
+            </p>
+            <p>
+                Daca simti ca vrei sa adaugi evenimentului tau o nota rafinata, noi dam glas instrumentelor si iti implinim dorinta.
+            </p>
+        </section>
+        <section class="videoplayer-slider section">
+            Here should be the videoplayer slider
+        </section>
+        <section class="reviews section">
+            <div class="contact-us">
+                <h3>
+                    Hai sa ne cunoastem! ;)
+                </h3>
+                <p>
+                    Ai intrebari?
+                </p>
+                <p>
+                    sau
+                </p>
+                <p>
+                    Doresti o oferta?
+                </p>
+                <button class="cta-button">contacteaza-ne</button>
+
+                <p>
+                    Tel: <a href="tel:+40736644745">0736.644.745</a>
+                </p>
+                <p>
+                    Mail: <a href="tel:+40736644745">0736.644.745</a>
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="section">
+            <div class="footer-socials">
+                <a href="https://youtube.com/@AcousticVibesBucharest"><i>youtube icon</i> youtube.com/@AcousticVibesBucharest</a>
+                <a href="https://facebook.com/Acoustic.Vibes.Bucharest"><i>facebook icon</i> facebook.com/Acoustic.Vibes.Bucharest</a>
+                <a href="https://youtube.com/@AcousticVibesBucharest"><i>instagram icon</i> instagram.com/acousticvibesbucharest</a>
+            </div>
+            <div>
+                <img src="assets/logo.png" alt="Acoustic Vibes">
+            </div>
+        </section>
+        <section class="copyright section">
+            <p>
+                Copyright @ Acoustic Vibes Band , 2025. All rights reserved.
+            </p>
+        </section>
+    </footer>
+    <script type="text/javascript">
+        const header = document.querySelector('#header');
+
+        const sentinel = document.querySelector('.header-sentinel');
+
+        const headerObserver = new IntersectionObserver(
+            (entries) => {
+                const entry = entries[0];
+                
+                if (entry.isIntersecting) {
+                    console.log('is intersecting!');
+                    header.classList.remove('header-scrolled');
+                } else {
+                    console.log('is not intersecting!');
+                    header.classList.add('header-scrolled');
+                }
+            }, 
+            {
+                // Options for the observer
+                threshold: 0, // Trigger as soon as any part of the sentinel enters/exits
+                rootMargin: "0px 0px 0px 0px"
+            }
+        );
+
+        // Start observing the sentinel
+        headerObserver.observe(sentinel);
+    </script>
+</body>
+</html>
