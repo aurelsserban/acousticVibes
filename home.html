@@ -71,8 +71,43 @@
                 </p>
             </div>
         </section>
-        <section class="videoplayer-slider section">
-            Here should be the videoplayer slider
+        <section class="videoplayer-slider section container">
+            <h3>video</h3>
+            <div class="video-slider">
+                <div class="video-song">
+                    <iframe width="250" height="142" src="https://www.youtube.com/embed/c-_q-RQyS9k?si=M4i89wdlecFqTQf1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-song">
+                    <iframe width="250" height="142" src="https://www.youtube.com/embed/8xFQ4BKFFEw?si=nPBWzW7aJUHxV4xr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-song">
+                    <iframe width="250" height="142" src="https://www.youtube.com/embed/YQviLAZOhLY?si=mKuGFZwADGBVhmV1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-song">
+                    <iframe width="250" height="142" src="https://www.youtube.com/embed/zYN2mjwVqfI?si=jVPP93Q9a2s7Ttix" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-song">
+                    <iframe width="250" height="142" src="https://www.youtube.com/embed/f8pbFX64ClI?si=Sxbjv94wvpfH26dZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-song">
+                    <iframe width="250" height="142" src="https://www.youtube.com/embed/eh3kFrD_j20?si=SzmkyeoXEiXD0Oz1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-song">
+                    <iframe width="250" height="142" src="https://www.youtube.com/embed/w0Af8uRlsWs?si=flCDRJiSAETbiPuW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-song">
+                    <iframe width="250" height="142" src="https://www.youtube.com/embed/gEwi2MHqoq4?si=70o5wujMzm_B1On5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-song">
+                    <iframe width="250" height="142" src="https://www.youtube.com/embed/je7PRqICH3k?si=6zCFE3iRQb_aYclL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-song">
+                    <iframe width="250" height="142" src="https://www.youtube.com/embed/tvnLNfH5uGg?si=tlMrop4t55X3Ufh9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-song">
+                    <iframe width="250" height="142" src="https://www.youtube.com/embed/sefFYj8qeCM?si=k6fawbAa_mH1VEDW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
         </section>
         <section class="reviews section container">
             <div class="slider-wrapper">
@@ -196,6 +231,15 @@
                 autoplay: true,
                 arrows: false,
                 autoplaySpeed: 10000,
+                respondTo: 'min'
+            });
+            $('.video-slider').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                dots: false,
+                autoplay: false,
+                autoplaySpeed: 5000,
                 respondTo: 'min'
             });
         });
