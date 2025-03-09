@@ -292,6 +292,7 @@ a:focus-visible {
   iframe {
     margin: 24px auto;
     display: block;
+    max-width: 100%;
   }
   h3 {
     font-size: var(--font-size-heading-regular);
@@ -328,6 +329,7 @@ a:focus-visible {
   justify-content: space-around;
   padding-top: 24px;
   padding-bottom: 24px;
+  flex-wrap: wrap;
 
   h3 {
     font-size: var(--font-size-heading-regular);
@@ -389,6 +391,7 @@ a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .footer-socials {
